@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 20px;
+    div{
+        font-size: 20px;
+        line-height: 30px;
+        word-spacing: 5px;
+        padding-top: 50px;
+    }
+}
