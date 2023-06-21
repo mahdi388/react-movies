@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './styles/main.scss'
 import welcomeImage from './images/welcome.jpg'
 import Home from './components/Home';
+import Movies from './components/Movies';
+import AboutUs from './components/AboutUs';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 
 function App() {
@@ -16,12 +18,12 @@ function App() {
             Home
             <div></div>
           </li>
-          <li>
+          <li onClick={()=>navigate('/movies')}>
             <div></div>
             Movies
             <div></div>
           </li>
-          <li>
+          <li onClick={()=>navigate('/about-us')}>
             <div></div>
             About us
             <div></div>
@@ -32,6 +34,8 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/movies' element={<Movies />} />
+          <Route path='/about-us' element={<AboutUs />} />
         </Routes>
       </main>
     </>
